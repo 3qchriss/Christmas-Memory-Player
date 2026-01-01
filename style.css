@@ -1,0 +1,75 @@
+:root{
+  --bg:#070b18;
+  --card:rgba(255,255,255,0.06);
+  --card2:rgba(255,255,255,0.10);
+  --border:rgba(255,255,255,0.18);
+  --border2:rgba(255,235,180,0.35);
+  --text:rgba(255,255,255,0.92);
+  --accent:rgba(255,235,180,0.95);
+}
+
+body{
+  margin:0;
+  padding:0;
+  overflow:hidden;
+  background:var(--bg);
+  font-family:"Noto Sans TC", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+}
+
+canvas{ display:block; }
+
+button{
+  font-family:"Noto Sans TC", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  letter-spacing: 0.2px;
+}
+
+/* 歌單按鈕（卡片感） */
+.track-btn{
+  border:1px solid var(--border);
+  border-radius:14px;
+  background:var(--card);
+  color:var(--accent);
+  backdrop-filter: blur(6px);
+  cursor:pointer;
+  font-size:16px;
+  text-align:left;
+  padding:0 16px;
+  transition: transform 0.08s ease, background 0.12s ease, border-color 0.12s ease;
+}
+
+.track-btn:hover{
+  background:var(--card2);
+  border-color:var(--border2);
+  transform: translateY(-1px);
+}
+
+.track-btn:active{
+  transform: translateY(0px);
+}
+
+/* 播放器控制按鈕 */
+.ctrl-btn{
+  border:1px solid var(--border);
+  border-radius:12px;
+  background:var(--card);
+  color:var(--text);
+  cursor:pointer;
+  font-size:14px;
+  padding:0 12px;
+  transition: transform 0.08s ease, background 0.12s ease, border-color 0.12s ease;
+}
+
+.ctrl-btn:hover{
+  background:var(--card2);
+  border-color:var(--border2);
+  transform: translateY(-1px);
+}
+
+.ctrl-btn:active{
+  transform: translateY(0px);
+}
+
+input[type="range"]{
+  accent-color: rgba(255,220,150,0.95);
+}
